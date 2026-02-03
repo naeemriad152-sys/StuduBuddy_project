@@ -1,0 +1,114 @@
+ /* Project: StudyBuddy SPA
+   Student Name: [NAEEM RIAD SALEM]
+   Student ID: [120222476]
+*/
+
+
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>StudyBuddy SPA | تطبيق إدارة الدراسة</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+<header>
+    <div class="logo">🎓 StudyBuddy</div>
+    <nav>
+        <button class="menu-toggle" id="hamburger">☰</button>
+        
+        <ul class="nav-links">
+            <li><a href="#" class="nav-item active" data-section="dashboard">Dashboard</a></li>
+            <li><a href="#" class="nav-item" data-section="tasks">Tasks</a></li>
+            <li><a href="#" class="nav-item" data-section="habits">Habits</a></li>
+            <li><a href="#" class="nav-item" data-section="resources">Resources</a></li>
+            <li><a href="#" class="nav-item" data-section="settings">About</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main id="app-content">
+    
+    <section id="dashboard" class="content-section">
+        <h1>Welcome Back!</h1>
+        <div class="summary-cards">
+            <div class="card"><h3>Due Soon</h3><p id="due-soon-count">0</p></div>
+            <div class="card"><h3>Completed</h3><p id="completed-count">0</p></div>
+            <div class="card"><h3>Habit Streak</h3><p id="habit-streak">0 Days</p></div>
+        </div>
+        
+        <div class="progress-container card">
+            <h3>Overall Progress</h3>
+            <div class="progress-bar-bg">
+                <div id="main-progress-bar" style="width: 0%"></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="tasks" class="content-section hidden">
+        <div class="section-header">
+            <h1>Tasks</h1>
+            <button id="add-task-btn" class="btn-primary">+ New Task</button>
+        </div>
+        
+        <div id="task-form-container" class="hidden card">
+            <form id="task-form">
+                <input type="text" id="task-title" placeholder="Task Title" required>
+                <input type="date" id="task-date" required>
+                <select id="task-priority">
+                    <option value="High">High</option>
+                    <option value="Medium">Medium</option>
+                    <option value="Low">Low</option>
+                </select>
+                <input type="text" id="task-category" placeholder="Category">
+                <button type="submit" class="btn-primary">Save Task</button>
+            </form>
+        </div>
+        
+        <div id="tasks-container" class="tasks-grid"></div>
+    </section>
+
+    <section id="habits" class="content-section hidden">
+        <h1>Habit Tracker</h1>
+        <form id="habit-form" class="card">
+            <input type="text" id="habit-name" placeholder="Enter new habit..." required>
+            <button type="submit" class="btn-primary">Add</button>
+        </form>
+        <div id="habits-container"></div>
+    </section>
+
+    <section id="resources" class="content-section hidden">
+        <h1>Resources</h1>
+        <input type="text" id="resource-search" placeholder="Search resources..." class="card">
+        <div id="resources-list" class="resources-grid"></div>
+    </section>
+
+    <section id="settings" class="content-section hidden">
+        <div class="card">
+            <h1>About</h1>
+            <p><strong>Developed by:</strong> [Naeem riad salem]</p>
+            <p><strong>Student ID:</strong> [120222476]</p>
+            <hr>
+            <button id="theme-toggle" class="btn-secondary">Toggle Theme</button>
+            <button id="reset-data" class="btn-danger">Reset Data</button>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2026 StudyBuddy - IUG Faculty of IT</p>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
+
+* Project: StudyBuddy SPA
+Student Name: [NAEEM RIAD SALEM]
+Student ID: [120222476]
+*/

@@ -1,0 +1,118 @@
+/* Project: StudyBuddy SPA
+   Student Name: [NAEEM RIAD SALEM]
+   Student ID: [120222476]
+*/
+
+
+/* --- المتغيرات الأساسية (لوحة الألوان) --- */
+:root { 
+    --p: #4a90e2;   /* اللون الأساسي (الأزرق) */
+    --bg: #f4f7f6;  /* لون خلفية الصفحة */
+    --c: #fff;      /* لون خلفية العناصر والبطاقات */
+    --t: #333;      /* لون النص الأساسي */
+}
+
+/* --- إعدادات الوضع الليلي (Dark Mode) --- */
+body.dark { 
+    --bg: #1a1a1a;  /* خلفية غامقة */
+    --c: #2d2d2d;   /* بطاقات رمادية غامقة */
+    --t: #fff;      /* نص أبيض */
+}
+
+/* --- التنسيق العام للجسم (Body) --- */
+body { 
+    font-family: 'Poppins', sans-serif; /* نوع الخط المستخدم */
+    background: var(--bg);              /* تطبيق لون الخلفية من المتغيرات */
+    color: var(--t);                   /* تطبيق لون النص من المتغيرات */
+    margin: 0;                          /* إلغاء الهوامش الافتراضية للمتصفح */
+}
+
+/* --- خاصية الإخفاء (أساسية لنظام SPA) --- */
+.hidden { 
+    display: none !important; /* إخفاء العنصر تماماً من الصفحة */
+}
+
+/* --- تنسيق الهيدر (رأس الصفحة) --- */
+header { 
+    background: var(--p);               /* لون خلفية الهيدر */
+    color: #fff;                        /* لون النص في الهيدر */
+    padding: 1rem 5%;                  /* مسافات داخلية (تباعد) */
+    display: flex;                      /* استخدام Flexbox لتوزيع العناصر */
+    justify-content: space-between;    /* توزيع الشعار والقائمة على الأطراف */
+}
+
+/* --- قائمة التنقل --- */
+.nav-links { 
+    display: flex;       /* جعل الروابط بجانب بعضها */
+    list-style: none;    /* إلغاء نقاط القائمة الافتراضية */
+    gap: 1rem;           /* مسافة بين الروابط */
+}
+
+.nav-links a { 
+    color: #fff;           /* لون رابط التنقل */
+    text-decoration: none; /* إلغاء الخط تحت الرابط */
+    padding: 5px;          /* مساحة حول النص */
+}
+
+/* تمييز الرابط النشط (الصفحة المفتوحة حالياً) */
+.nav-links a.active { 
+    border-bottom: 2px solid #fff; /* وضع خط تحت الرابط النشط */
+}
+
+/* --- تنسيق البطاقات (Cards) --- */
+.card { 
+    background: var(--c);               /* لون خلفية البطاقة */
+    padding: 20px;                      /* مسافة داخلية */
+    border-radius: 10px;               /* حواف دائرية */
+    margin: 10px 0;                    /* مسافة خارجية فوق وتحت البطاقة */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* ظل خفيف لإعطاء عمق */
+}
+
+/* --- شبكة البطاقات الملخصة في الداشبورد --- */
+.summary-cards { 
+    display: grid; 
+    /* جعل البطاقات تتوزع تلقائياً وتصغر حسب حجم الشاشة */
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); 
+    gap: 15px; /* مسافة بين البطاقات */
+}
+
+/* --- شريط التقدم (Progress Bar) --- */
+.progress-bar-bg { 
+    background: #eee;      /* لون خلفية الشريط الرمادي */
+    border-radius: 10px;   /* حواف دائرية */
+    height: 15px;          /* طول الشريط */
+    overflow: hidden;      /* لضمان عدم خروج اللون الأخضر عن الحواف */
+}
+
+#main-progress-bar { 
+    background: #2ed573;   /* لون التقدم (الأخضر) */
+    height: 100%;          /* ملء كامل ارتفاع الحاوية */
+    transition: 0.3s;      /* حركة ناعمة عند تغير النسبة */
+}
+
+/* --- شبكة عرض المهام --- */
+.tasks-grid { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); 
+    gap: 15px; 
+}
+
+/* --- تمييز المهام ذات الأولوية العالية --- */
+.priority-high { 
+    border-left: 5px solid red; /* وضع شريط أحمر جهة اليسار */
+}
+
+/* --- تنسيق الأزرار الأساسية --- */
+.btn-primary { 
+    background: var(--p);  /* لون الزر الأزرق */
+    color: #fff;           /* لون نص الزر */
+    border: none;          /* إلغاء حدود الزر الافتراضية */
+    padding: 10px 20px;    /* حجم الزر */
+    border-radius: 5px;    /* حواف دائرية للزر */
+    cursor: pointer;      /* تغيير شكل الماوس عند الوقوف على الزر */
+}
+
+/* Project: StudyBuddy SPA
+   Student Name: [NAEEM RIAD SALEM]
+   Student ID: [120222476]
+*/
